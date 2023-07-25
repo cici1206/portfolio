@@ -1,0 +1,282 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: 'Noto Serif Display', serif;
+    background-color: #FBF9EB;
+	color: black;
+	cursor: crosshair;
+}
+
+#sec0{
+    border-top: 1px solid black;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 100px auto 150px;
+	gap: 10px;
+	padding: 10px;
+  }
+  
+  .grid-container > div {
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+  }
+  
+  .DIV1{
+	position: sticky;
+    top: 15vh;
+    height: 100vh;
+  }
+  
+  .DIV3{
+	position: sticky;
+    top: 15vh;
+    height: 100vh;
+  }
+
+  .DIV1 a {
+	color: transparent;
+    text-shadow: 1px 1px 1px #000, 1px 1px 1px #fff;
+    font-size: 12px;
+    text-decoration: none;
+	
+  }
+
+  .DIV1 p {
+    text-shadow: 1px 1px 1px #000, 1px 1px 1px #fff;
+    font-size: 12px;
+  }
+
+  .DIV3 a {
+    font-family: 'Noto Serif Display', serif;
+    color: transparent;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000, 1px 1px 1px #fff;
+    font-size: 12px;
+    text-decoration: none;
+	list-style-type: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1000px) {
+	.topnav a {display: none;}
+	.topnav a.icon {
+	  display: block;
+	}
+  }
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+	.DIV1 a {display: none;}
+	.DIV1 p {display: none;}
+  }
+
+  /* When the screen is less than xxx pixels wide, full display for DIV2 content,*/
+@media screen and (max-width: 800px) {
+	.DIV1 {display: none;}
+	.DIV3 {display: sticky;}
+	.grid-container {display: flex;}
+  }
+
+  .sidebar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 15vh;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 20vh;
+  }
+  
+  .sidebar a {
+	text-decoration: none;
+	font-size: small;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: small;
+	margin-left: 50px;
+  }
+  
+  #main {
+	transition: margin-left .5s;
+	padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+	.sidebar {padding-top: 15px;}
+	.sidebar a {font-size: 18px;}
+  }
+
+
+  .DIV2 p {
+	font-size: 10px;
+  }
+
+  .row {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+	padding: 0 4px;
+  }
+
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+	-ms-flex: 25%; /* IE10 */
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+  }
+
+  .column2 {
+	-ms-flex: 50%; /* IE10 */
+	flex: 50%;
+	max-width: 50%;
+	padding: 0 4px;
+  }
+
+  
+  .column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+	.column {
+	  -ms-flex: 50%;
+	  flex: 50%;
+	  max-width: 50%;
+	}
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+	.column {
+	  -ms-flex: 100%;
+	  flex: 100%;
+	  max-width: 100%;
+	}
+  }
+
+.item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 0.7px dashed rgb(190, 190, 190);
+	height: 400px;
+}
+.col{
+	flex: 1;
+	text-align: center;
+}
+.tz-gallery{
+	flex: 2;
+	display: flex;
+}
+
+.tz-gallery img{
+	width: 15vw;
+	height: 30vh;
+	max-height: 20vw;
+	object-fit: cover;
+	padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+	.projectimg2 {display: none;}
+  }
+
+
+.tz-gallery .row{
+	display: flex;
+}
+.tz-gallery .row div{
+	margin: 0 10px;
+}
+
+.item .maintitle{
+	font-size: 1.8vw;
+}
+
+.submit-btn
+{
+	width: 8vw;
+	font-size: 8px;
+	padding: 10px 10px;
+	cursor: pointer;
+	margin-top: 10px;
+	background: transparent;
+	border: 1px solid #999;
+	outline: none;
+	letter-spacing: 1px;
+	transition: 0.2s ease;
+	position: relative;
+}
+.submit-btn:hover{
+	background: black;
+	color:white;
+}
+.submit-btn:after{
+	position: absolute;
+	content:"";
+	border-bottom: 1px solid black;
+	width: 100%;
+	left: 50%;
+	bottom: -7px;
+	transform: translate(-50%,-50%);
+}
+
+.projectimg{
+	width: 400px!important;
+	position: flex;
+}
+
+
+.nav li a{
+	font-size: 1vw;
+	text-decoration: none;
+	color: grey;
+}
+.nav{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+	
+}
+
+.stickynav ul{
+	position: sticky;
+	top: 15vh;

@@ -1,0 +1,218 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: 'Noto Serif Display', serif;
+    background-color:rgb(29, 28, 28);
+	color: whitesmoke;
+	cursor: crosshair;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 100px auto 150px;
+	gap: 10px;
+	padding: 10px;
+  }
+  
+  .grid-container > div {
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+  }
+
+  .DIV1{
+	position: sticky;
+    top: 15vh;
+    height: 100vh;
+  }
+  
+  .DIV3{
+	position: sticky;
+    top: 15vh;
+    height: 100vh;
+  }
+
+  .DIV1 a {
+	color: transparent;
+    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #000;
+    font-size: 12px;
+    text-decoration: none;
+	
+  }
+
+  .DIV1 p {
+    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #000;
+    font-size: 12px;
+  }
+
+  .navigation{
+	list-style-type: none;
+  }
+
+  .DIV3 ul li a {
+    font-family: 'Noto Serif Display', serif;
+    color: transparent;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #000;
+    font-size: 12px;
+    text-decoration: none;
+	list-style-type: none;
+}
+
+.top {
+	display: absolute;
+	align-items: center;
+	justify-content: center;
+	background-attachment: fixed;
+	text-align: center;
+	height: 100vh;
+}
+
+.top .muiten{
+	position: absolute;
+	bottom:32%;
+	left: 45%;
+	transform: rotate(90deg) scale(0.5);
+	transition: 0.5s ease;
+}
+
+.muiten:hover{
+	 transform: rotate(90deg) scale(0.7)
+}
+
+.toptext{
+	font-size: 4vw;
+	padding-top: 10vh;
+    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #000;
+}
+
+.toptextbody{
+	font-size: 1vw;
+	padding-left: 100px;
+	padding-right: 100px;
+	text-align: justify;
+}
+
+#sec0{
+    border-bottom: 1px solid whitesmoke;
+
+}
+
+#sec1{
+	padding-bottom: 20vh;
+}
+
+
+#sec3 p{
+	text-align: left;
+	font-size: 1vw;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.myBtn{
+	position: fixed;
+	bottom: 18vh;
+	right: 3vh;
+	z-index: 99;
+	border: none;
+	outline: none;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: rgba(238, 238, 238, 0.553);
+	cursor: pointer;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+
+/* When the screen is less than xxx pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1000px) {
+	.topnav a {display: none;}
+	.topnav a.icon {
+	  display: block;
+	}
+  }
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* When the screen is less than xxx pixels wide, hide things,*/
+@media screen and (max-width: 1000px) {
+	.DIV1 a {display: none;}
+	.DIV1 p {display: none;}
+  }
+
+
+/* When the screen is less than xxx pixels wide, full display for DIV2 content,*/
+@media screen and (max-width: 800px) {
+	.DIV1 {display: none;}
+	.DIV3 {display: sticky;}
+	.grid-container {display: flex;}
+  }
+
+  .sidebar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 15vh;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 20vh;
+  }
+  
+  .sidebar a {
+	text-decoration: none;
+	font-size: small;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: small;
+	margin-left: 50px;
+  }
+  
+  #main {
+	transition: margin-left .5s;
+	padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+	.sidebar {padding-top: 15px;}
+	.sidebar a {font-size: 18px;}
+  }
+
+  .DIV3 a {
+    font-family: 'Noto Serif Display', serif;
+    color: transparent;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #fff, 1px 1px 1px #000;
+    font-size: 12px;
+    text-decoration: none;
+	list-style-type: none;
+}

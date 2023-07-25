@@ -1,0 +1,34 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: 'Noto Serif Display', serif;
+    background-color: rgb(29, 28, 28);
+}
+
+.PicClick{
+	display: flex;
+	cursor: crosshair;
+}
+
+.Abbe3a{
+    position:absolute;
+}
+
+.Abbe3b{
+	position:absolute;
+	z-index: -1;   
+}
+.PicClick:hover .Abbe3a{
+	visibility: hidden;
+}
+.PicClick:hover .Abbe3b{
+	visibility: visible;
+}
+
+img{
+	max-width: 100%;
+	margin: auto;
+}
